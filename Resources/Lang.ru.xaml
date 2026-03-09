@@ -1,0 +1,230 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    
+    <!-- Navigation -->
+    <sys:String x:Key="Nav_PCCheck">🔍  PC ПРОВЕРКА</sys:String>
+    <sys:String x:Key="Nav_Registry">📋  РЕЕСТР</sys:String>
+    <sys:String x:Key="Nav_Accounts">👤  АККАУНТЫ</sys:String>
+    <sys:String x:Key="Nav_Programs">⚙️  ПРОГРАММЫ</sys:String>
+    <sys:String x:Key="Nav_Folders">📂  ПАПКИ</sys:String>
+    <sys:String x:Key="Nav_Sites">🌐  САЙТЫ</sys:String>
+    <sys:String x:Key="Nav_System">💻  СИСТЕМА</sys:String>
+    
+    <!-- PC Check Page -->
+    <sys:String x:Key="Page_FileSearch">ПОИСК ФАЙЛОВ</sys:String>
+    <sys:String x:Key="Page_FileSearch_Desc">Сканирование дисков на наличие подозрительных файлов</sys:String>
+    <sys:String x:Key="Btn_StartScan">Начать поиск</sys:String>
+    <sys:String x:Key="Btn_StartScanFull">🚀 НАЧАТЬ СКАН</sys:String>
+    <sys:String x:Key="Btn_NewScan">↻ Новый скан</sys:String>
+    <sys:String x:Key="Btn_Cancel">✕ Отмена</sys:String>
+    <sys:String x:Key="Status_ScanResults">РЕЗУЛЬТАТЫ СКАНА</sys:String>
+    <sys:String x:Key="Status_Scanning">Сканирование...</sys:String>
+    <sys:String x:Key="Status_Initializing">Инициализация сканирования...</sys:String>
+    <sys:String x:Key="Status_NoThreats">Угрозы не обнаружены</sys:String>
+    <sys:String x:Key="Status_SystemClean">Ваша система чиста</sys:String>
+    <sys:String x:Key="Status_ScanningFiles">Сканирование файлов...</sys:String>
+    <sys:String x:Key="Status_WaitAnalysis">Подождите, идёт анализ системы</sys:String>
+    <sys:String x:Key="Label_Threats">угроз</sys:String>
+    <sys:String x:Key="Label_Files">файлов</sys:String>
+    
+    <!-- Disk Selection Modal -->
+    <sys:String x:Key="Modal_SelectDrives">ВЫБОР ДИСКОВ</sys:String>
+    <sys:String x:Key="Modal_ScanParams">ПАРАМЕТРЫ ПРОВЕРКИ</sys:String>
+    <sys:String x:Key="Param_IconScan">Использовать метод поиска по иконкам</sys:String>
+    <sys:String x:Key="Param_IconScanNote">[ Увеличивает время сканирования на ~100% ]</sys:String>
+    <sys:String x:Key="Param_SignatureScan">Использовать метод поиска по сигнатурам</sys:String>
+    <sys:String x:Key="Param_SignatureScanNote">[ Увеличивает время сканирования на ~300% ]</sys:String>
+    
+    <!-- Registry Page -->
+    <sys:String x:Key="Page_Registry">АНАЛИЗ РЕЕСТРА</sys:String>
+    <sys:String x:Key="Page_Registry_Desc">Сканирование установленных и удалённых программ</sys:String>
+    <sys:String x:Key="Filter_All">Все</sys:String>
+    <sys:String x:Key="Filter_Installed">Установлено</sys:String>
+    <sys:String x:Key="Filter_Deleted">Удалено</sys:String>
+    <sys:String x:Key="Filter_Traces">Следы</sys:String>
+    
+    <!-- Accounts Page -->
+    <sys:String x:Key="Page_Accounts">STEAM АККАУНТЫ</sys:String>
+    <sys:String x:Key="Page_Accounts_Desc">Список Steam аккаунтов на этом ПК</sys:String>
+    <sys:String x:Key="Label_Active">Активен</sys:String>
+    <sys:String x:Key="Label_Inactive">Неактивен</sys:String>
+    <sys:String x:Key="Label_NoBans">Нет банов</sys:String>
+    
+    <!-- Programs Page -->
+    <sys:String x:Key="Page_Programs">ПРОГРАММЫ</sys:String>
+    <sys:String x:Key="Page_Programs_Desc">Инструменты диагностики и анализа</sys:String>
+    
+    <!-- Folders Page -->
+    <sys:String x:Key="Page_Folders">СИСТЕМНЫЕ ПАПКИ</sys:String>
+    <sys:String x:Key="Page_Folders_Desc">Быстрый доступ к системным директориям</sys:String>
+    <sys:String x:Key="Section_User">Пользователь</sys:String>
+    <sys:String x:Key="Section_System">Система</sys:String>
+    <sys:String x:Key="Section_Logs">Логи</sys:String>
+    
+    <!-- Sites Page -->
+    <sys:String x:Key="Page_Sites">ПОЛЕЗНЫЕ САЙТЫ</sys:String>
+    <sys:String x:Key="Page_Sites_Desc">Быстрый доступ к онлайн-ресурсам</sys:String>
+    <sys:String x:Key="Section_Checkers">Чекеры</sys:String>
+    <sys:String x:Key="Section_Services">Сервисы</sys:String>
+    <sys:String x:Key="Section_Tools">Инструменты</sys:String>
+    
+    <!-- System Page -->
+    <sys:String x:Key="Page_System">ИНФОРМАЦИЯ О СИСТЕМЕ</sys:String>
+    <sys:String x:Key="Page_System_Desc">Характеристики вашего компьютера</sys:String>
+    <sys:String x:Key="Label_OS">ОС</sys:String>
+    <sys:String x:Key="Label_InstallDate">Дата установки</sys:String>
+    <sys:String x:Key="Label_Monitors">Мониторов</sys:String>
+    <sys:String x:Key="Label_LastBoot">Последний запуск</sys:String>
+    <sys:String x:Key="Label_RAM">ОЗУ</sys:String>
+    <sys:String x:Key="Label_CPU">Процессор</sys:String>
+    <sys:String x:Key="Label_GPU">Видеокарта</sys:String>
+    <sys:String x:Key="Label_Motherboard">Материнская плата</sys:String>
+    <sys:String x:Key="Label_MachineName">Имя ПК</sys:String>
+    <sys:String x:Key="Label_UserName">Пользователь</sys:String>
+    <sys:String x:Key="Section_QuickBuffers">Быстрое копирование</sys:String>
+    <sys:String x:Key="Section_About">О программе</sys:String>
+    <sys:String x:Key="Section_ExtraTools">Доп. Инструменты</sys:String>
+    <sys:String x:Key="Section_MacroCheck">Проверка на макросы</sys:String>
+    <sys:String x:Key="Macro_Desc">Рисовалка для проверки плавности движений мыши</sys:String>
+    <sys:String x:Key="Btn_OpenDrawing">🎨 Открыть рисовалку</sys:String>
+    
+    <!-- Sidebar -->
+    <sys:String x:Key="Sidebar_Contact">Если у вас возникли вопросы,</sys:String>
+    <sys:String x:Key="Sidebar_ContactUs">напишите нам!</sys:String>
+    <sys:String x:Key="Label_Version">v1.0.0 · BETA</sys:String>
+    
+    <!-- Tooltips -->
+    <sys:String x:Key="Tip_Language">Язык / Language</sys:String>
+    <sys:String x:Key="Tip_Minimize">Свернуть</sys:String>
+    <sys:String x:Key="Tip_Close">Закрыть</sys:String>
+    
+    <!-- Table Headers -->
+    <sys:String x:Key="Header_FileName">ИМЯ ФАЙЛА</sys:String>
+    <sys:String x:Key="Header_Path">ПУТЬ</sys:String>
+    <sys:String x:Key="Header_Size">РАЗМЕР</sys:String>
+    <sys:String x:Key="Header_Date">ДАТА</sys:String>
+    
+    <!-- Additional UI -->
+    <sys:String x:Key="Btn_Refresh">↻ Обновить</sys:String>
+    <sys:String x:Key="Btn_ClearResults">🗑️ Очистить результаты</sys:String>
+    <sys:String x:Key="Btn_LoadAccounts">📥 Загрузить аккаунты</sys:String>
+    <sys:String x:Key="Page_Accounts_VacStatus">Обнаруженные аккаунты и статус VAC</sys:String>
+    <sys:String x:Key="Page_Programs_Tools">Внешние утилиты для анализа</sys:String>
+    <sys:String x:Key="Section_FileAnalysis">Анализ файлов / Директорий ПК</sys:String>
+    <sys:String x:Key="Label_RecentBans">Последние баны</sys:String>
+    <sys:String x:Key="Label_RecentMutes">Последние муты</sys:String>
+    <sys:String x:Key="Header_Reason">Причина</sys:String>
+    <sys:String x:Key="Header_Admin">Админ</sys:String>
+    <sys:String x:Key="Header_Duration">Срок</sys:String>
+    <sys:String x:Key="Header_Status">Статус</sys:String>
+    
+    <!-- MessageBox Dialogs -->
+    <sys:String x:Key="Msg_ToolNotFound">Инструмент не найден:</sys:String>
+    <sys:String x:Key="Msg_ToolNotFoundHint">Убедитесь, что папка 'apps' находится рядом с программой.</sys:String>
+    <sys:String x:Key="Msg_LaunchError">Ошибка запуска</sys:String>
+    <sys:String x:Key="Msg_FailedToLaunch">Не удалось запустить</sys:String>
+    <sys:String x:Key="Msg_Error">Ошибка</sys:String>
+    <sys:String x:Key="Msg_FolderNotFound">Папка не найдена:</sys:String>
+    <sys:String x:Key="Msg_NotFound">Не найдено</sys:String>
+    <sys:String x:Key="Msg_StartupError">Ошибка запуска:</sys:String>
+    <sys:String x:Key="Msg_SelectDrive">Пожалуйста, выберите хотя бы один диск для сканирования.</sys:String>
+    <sys:String x:Key="Msg_NoDrivesSelected">Диски не выбраны</sys:String>
+    <sys:String x:Key="Msg_ScanError">Ошибка сканирования:</sys:String>
+    <sys:String x:Key="Msg_NoSteamAccounts">Steam аккаунты не найдены.</sys:String>
+    <sys:String x:Key="Msg_NoSteamAccountsHint">Убедитесь, что Steam установлен.</sys:String>
+    <sys:String x:Key="Msg_NoAccounts">Нет аккаунтов</sys:String>
+    <sys:String x:Key="Msg_KeyboardError">Не удалось запустить экранную клавиатуру:</sys:String>
+    <sys:String x:Key="Msg_CS2NotRunning">CS2 не запущен! Запустите игру перед проверкой.</sys:String>
+    <sys:String x:Key="Msg_CheckComplete">Проверка завершена!</sys:String>
+    <sys:String x:Key="Msg_CheckCompleteHint">Если меню не открылось — биндов нет.</sys:String>
+    <sys:String x:Key="Msg_Result">Результат</sys:String>
+    <sys:String x:Key="Msg_CriticalError">Критическая ошибка</sys:String>
+    <sys:String x:Key="Msg_AppCrashed">Приложение завершилось с ошибкой!</sys:String>
+    <sys:String x:Key="Msg_CheckCrashLog">Проверьте crash_log.txt для деталей.</sys:String>
+    
+    <!-- USB Page -->
+    <sys:String x:Key="Nav_USB">🔌  USB</sys:String>
+    <sys:String x:Key="Page_USB">ИСТОРИЯ USB</sys:String>
+    <sys:String x:Key="Page_USB_Desc">Список подключённых USB устройств</sys:String>
+    <sys:String x:Key="Filter_Connected">Подключено</sys:String>
+    <sys:String x:Key="Filter_Disconnected">Отключено</sys:String>
+    <sys:String x:Key="Header_DeviceName">УСТРОЙСТВО</sys:String>
+    <sys:String x:Key="Header_Serial">СЕРИЙНЫЙ НОМЕР</sys:String>
+    <sys:String x:Key="Header_LastConnected">ПОСЛЕДНЕЕ ПОДКЛЮЧЕНИЕ</sys:String>
+    
+    <!-- Additional -->
+    <sys:String x:Key="Nav_Additional">➕  Дополнительно</sys:String>
+    <sys:String x:Key="Btn_VMCheck">🔍 Проверка VM</sys:String>
+    <sys:String x:Key="Label_SystemInfo">Системная информация</sys:String>
+    <sys:String x:Key="Label_MonitorCount">Количество экранов:</sys:String>
+    <sys:String x:Key="Label_SessionStart">Время запуска сеанса:</sys:String>
+    <sys:String x:Key="Label_System">Система:</sys:String>
+    <sys:String x:Key="Label_SystemInstallDate">Дата установки системы:</sys:String>
+    <sys:String x:Key="Label_RAMVolume">Объем ОЗУ:</sys:String>
+    <sys:String x:Key="Label_Processor">Процессор:</sys:String>
+    <sys:String x:Key="Label_VideoCard">Видеокарта:</sys:String>
+    <sys:String x:Key="Label_MotherboardFull">Материнская плата:</sys:String>
+    <sys:String x:Key="Label_VMStatus">Система работает в виртуальной среде:</sys:String>
+    <sys:String x:Key="Label_AboutChecker">Информация о чекере</sys:String>
+    <sys:String x:Key="Label_Creator">Создатель:</sys:String>
+    <sys:String x:Key="Label_Project">Проект:</sys:String>
+    <sys:String x:Key="Label_VersionFull">Версия:</sys:String>
+    
+    <!-- USB Page Extended -->
+    <sys:String x:Key="Page_USB_Title">USB УСТРОЙСТВА</sys:String>
+    <sys:String x:Key="USB_SearchPlaceholder">Поиск по названию или серийнику...</sys:String>
+    <sys:String x:Key="USB_Carriers">Носители</sys:String>
+    <sys:String x:Key="USB_Peripherals">Периферия</sys:String>
+    <sys:String x:Key="USB_AllDevices">Все устройства</sys:String>
+    <sys:String x:Key="USB_Connected">Подключено:</sys:String>
+    <sys:String x:Key="USB_Disconnected">Отключено:</sys:String>
+    
+    <!-- Programs Page Extended -->
+    <sys:String x:Key="Programs_FileAnalysis">Анализ файлов / Директорий ПК</sys:String>
+    <sys:String x:Key="Programs_BrowserAnalysis">Анализ браузеров / Веб-приложений</sys:String>
+    <sys:String x:Key="Programs_GameAnalysis">Анализ процесса игры</sys:String>
+    <sys:String x:Key="Programs_RegistryAnalysis">Анализ реестра</sys:String>
+    
+    <!-- Folders Page Extended -->
+    <sys:String x:Key="Page_Folders_Title">СИСТЕМНЫЕ ПАПКИ</sys:String>
+    <sys:String x:Key="Page_Folders_DescFull">Мгновенный доступ к важным директориям системы</sys:String>
+    <sys:String x:Key="Section_UserFull">ПОЛЬЗОВАТЕЛЬ</sys:String>
+    <sys:String x:Key="Section_SystemFull">СИСТЕМА</sys:String>
+    <sys:String x:Key="Section_LogsTemp">ЛОГИ / ТЕМП</sys:String>
+    <sys:String x:Key="Section_RegistryFull">РЕЕСТР</sys:String>
+    
+    <!-- Sites Page Extended -->
+    <sys:String x:Key="Page_Sites_Title">ВЕБ-РЕСУРСЫ</sys:String>
+    <sys:String x:Key="Page_Sites_DescFull">Быстрый переход к полезным сайтам и сервисам</sys:String>
+    <sys:String x:Key="Sites_EmailSection">ПОЧТА / EMAIL</sys:String>
+    <sys:String x:Key="Sites_SocialSection">СОЦСЕТИ / ОПЛАТА</sys:String>
+    
+    <!-- Additional Page -->
+    <sys:String x:Key="Page_Additional_Title">ДОПОЛНИТЕЛЬНО</sys:String>
+    <sys:String x:Key="Page_Additional_Desc">Продвинутые инструменты для проверки</sys:String>
+    <sys:String x:Key="Additional_InGameCheck">Проверка в игре</sys:String>
+    <sys:String x:Key="Additional_HowItWorks">Как это работает</sys:String>
+    <sys:String x:Key="Additional_Description">Автоматически сканирует все бинды и комбинации клавиш в CS2. Проверяет F1-F12, цифры, буквы, а также комбинации с Alt, Ctrl и Shift.</sys:String>
+    <sys:String x:Key="Additional_Feature1">Проверка 100+ клавиш за ~30 секунд</sys:String>
+    <sys:String x:Key="Additional_Feature2">Комбинации Alt + Ctrl + Shift</sys:String>
+    <sys:String x:Key="Additional_Feature3">Автоматическое нахождение окна CS2</sys:String>
+    <sys:String x:Key="Additional_Feature4">Сворачивание игры после проверки</sys:String>
+    <sys:String x:Key="Additional_Feature5">Результат сразу после проверки</sys:String>
+    <sys:String x:Key="Additional_StartCheck">🔍 ЗАПУСТИТЬ ПРОВЕРКУ</sys:String>
+    <sys:String x:Key="Additional_Important">⚠️ Важно! Во время проверки:</sys:String>
+    <sys:String x:Key="Additional_Warning1">Не трогайте мышь</sys:String>
+    <sys:String x:Key="Additional_Warning2">Не трогайте клавиатуру</sys:String>
+    <sys:String x:Key="Additional_Warning3">Не взаимодействуйте с ПК до окончания</sys:String>
+    <sys:String x:Key="Additional_Parameters">ПАРАМЕТРЫ</sys:String>
+    <sys:String x:Key="Additional_NVIDIA">NVIDIA</sys:String>
+    <sys:String x:Key="Additional_Network">Сеть</sys:String>
+    <sys:String x:Key="Additional_Services">Службы</sys:String>
+    <sys:String x:Key="Additional_Keyboard">Клавиатура</sys:String>
+    <sys:String x:Key="Additional_MacroCheck">Проверка на макрос</sys:String>
+    <sys:String x:Key="Additional_DrawingCanvas">Холст для рисования</sys:String>
+    <sys:String x:Key="Additional_OpenCanvas">ОТКРЫТЬ ХОЛСТ</sys:String>
+    <sys:String x:Key="Additional_MouseAuto">ПО МЫШИ (авто)</sys:String>
+    
+</ResourceDictionary>
+
