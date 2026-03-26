@@ -48,12 +48,18 @@ body {
 
 /* Navigation */
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 4rem;
-    backdrop-filter: blur(10px);
+    padding: 1.5rem 4rem;
+    backdrop-filter: blur(20px);
+    background: rgba(10, 10, 15, 0.7);
     border-bottom: 1px solid rgba(255,255,255,0.05);
+    z-index: 1000;
 }
 .logo {
     font-size: 1.5rem;
@@ -91,14 +97,17 @@ body {
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 6rem 4rem;
-    min-height: 80vh;
+    padding: 6rem 4rem 10rem;
+    min-height: 100vh;
+    gap: 3rem;
 }
 .hero-content {
     flex: 1;
-    max-width: 600px;
+    max-width: 650px;
+    z-index: 5;
+    margin-top: 2rem;
 }
 
 .badge {
@@ -110,7 +119,8 @@ body {
     border-radius: 50px;
     font-size: 0.85rem;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     border: 1px solid rgba(34, 197, 94, 0.2);
 }
 .pulse {
@@ -130,11 +140,11 @@ body {
 }
 
 .hero-title {
-    font-size: 4.5rem;
+    font-size: 5rem;
     font-weight: 900;
     line-height: 1.1;
-    margin-bottom: 1.5rem;
-    letter-spacing: -1.5px;
+    margin-bottom: 2rem;
+    letter-spacing: -2.5px;
 }
 .text-gradient {
     background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
@@ -142,10 +152,11 @@ body {
     -webkit-text-fill-color: transparent;
 }
 .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: var(--text-secondary);
-    margin-bottom: 3rem;
-    max-width: 500px;
+    margin-bottom: 3.5rem;
+    max-width: 580px;
+    line-height: 1.6;
 }
 
 .cta-group {
@@ -284,6 +295,104 @@ body {
 .hero-card-4 { border-top: 2px solid #EAB308; }
 .mockup-footer { height: 60px; opacity: 0.8; background: linear-gradient(90deg, #1a1a24, #2a1b38); }
 
+/* Integrated Slider Mockup */
+.hero-image-container {
+    margin-left: -5rem;
+    z-index: 1;
+}
+
+.slider-mockup {
+    width: 900px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-container {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slides-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1.05);
+}
+
+.slider-img.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.slider-arrow:hover {
+    background: var(--accent-purple);
+    border-color: var(--accent-purple);
+}
+
+.slider-arrow.prev { left: 15px; }
+.slider-arrow.next { right: 15px; }
+
+.slider-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.slider-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.slider-dots .dot.active {
+    background: var(--accent-purple);
+    width: 20px;
+    border-radius: 4px;
+}
+
 
 .floating-badge {
     position: absolute;
@@ -301,8 +410,8 @@ body {
     margin-right: 8px;
 }
 .badge-1 {
-    top: 50px;
-    left: -50px;
+    bottom: 200px;
+    left: -30px;
     color: var(--accent-blue);
 }
 .badge-2 {
@@ -401,3 +510,4 @@ footer p {
     .features-grid { grid-template-columns: 1fr; }
     .badge-1, .badge-2 { display: none; }
 }
+/* Footer & Other... */

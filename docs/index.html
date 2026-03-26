@@ -25,11 +25,7 @@
 
     <main class="hero">
         <div class="hero-content">
-            <div class="badge">
-                <span class="pulse"></span> 
-                <span id="version-badge">v3.4.3 Доступна</span>
-            </div>
-            <h1 class="hero-title">Проверяй ПК <br>на <span class="text-gradient">максимальной</span> скорости</h1>
+            <h1 class="hero-title">Проверяй ПК на <br><span class="text-gradient">максимальной</span> скорости</h1>
             <p class="hero-subtitle">Инструмент нового поколения для глубокой проверки системы. Моментальные отчеты, защита от обхода и современный дизайн.</p>
             
             <div class="cta-group">
@@ -38,33 +34,38 @@
                 </a>
                 <a href="#features" class="btn btn-secondary">Подробнее</a>
             </div>
+            <div class="badge">
+                <span class="pulse"></span> 
+                <span id="version-badge">v3.4.3 Доступна</span>
+            </div>
             <p class="download-info">Размер: ~35 MB &bull; Требуется Windows 10/11</p>
         </div>
         
         <div class="hero-image-container">
-            <div class="glass-panel app-mockup">
-                <!-- Mockup of the app UI -->
+            <div class="glass-panel app-mockup slider-mockup">
                 <div class="mockup-header">
                     <div class="mockup-dots"><span></span><span></span><span></span></div>
-                    <div class="mockup-title">SayurinChecker v3.4.3</div>
+                    <div class="mockup-title">SayurinChecker - Screenshots</div>
                 </div>
-                <div class="mockup-body">
-                    <div class="mockup-sidebar">
-                        <div class="mockup-nav active"></div>
-                        <div class="mockup-nav"></div>
-                        <div class="mockup-nav"></div>
-                        <div class="mockup-nav"></div>
+                <div class="slider-container">
+                    <button class="slider-arrow prev" id="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slides-wrapper">
+                        <img src="screen1.png" alt="Screen 1" class="slider-img active">
+                        <img src="screen2.png" alt="Screen 2" class="slider-img">
+                        <img src="screen3.png" alt="Screen 3" class="slider-img">
+                        <img src="screen4.png" alt="Screen 4" class="slider-img">
+                        <img src="screen5.png" alt="Screen 5" class="slider-img">
+                        <img src="screen6.png" alt="Screen 6" class="slider-img">
                     </div>
-                    <div class="mockup-content">
-                        <div class="mockup-row">
-                            <div class="mockup-card hero-card-1"></div>
-                            <div class="mockup-card hero-card-2"></div>
-                        </div>
-                        <div class="mockup-row">
-                            <div class="mockup-card hero-card-3"></div>
-                            <div class="mockup-card hero-card-4"></div>
-                        </div>
-                        <div class="mockup-card mockup-footer"></div>
+                    <button class="slider-arrow next" id="next-slide"><i class="fas fa-chevron-right"></i></button>
+                    
+                    <div class="slider-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                        <span class="dot" data-index="4"></span>
+                        <span class="dot" data-index="5"></span>
                     </div>
                 </div>
             </div>
@@ -72,6 +73,8 @@
             <div class="floating-badge badge-2"><i class="fas fa-shield-alt"></i> Anti-Bypass</div>
         </div>
     </main>
+
+
 
     <section id="features" class="features-section">
         <h2 class="section-title">Почему <span class="text-gradient">SayurinChecker?</span></h2>
@@ -94,8 +97,28 @@
                 <h3>Современный UI</h3>
                 <p>Премиальный темный дизайн с глассморфизмом, плавной анимацией и продуманным расположением элементов управления.</p>
             </div>
+
+            <div class="feature-card">
+                <div class="feature-icon green"><i class="fas fa-shield-virus"></i></div>
+                <h3>Чистота 0/72</h3>
+                <p>Полное отсутствие детектов на VirusTotal. SayurinChecker абсолютно безопасен для вашей системы и не содержит вредоносного кода.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon purple"><i class="fab fa-steam"></i></div>
+                <h3>Steam Анализ</h3>
+                <p>Мгновенный вывод списка аккаунтов с детальной историей банов на проекте. Узнайте всё о прошлом любого профиля за секунды.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon blue"><i class="fas fa-toolbox"></i></div>
+                <h3>16+ Программ</h3>
+                <p>Интегрированный набор из 16 профессиональных утилит для глубокой проверки ПК с удобными и быстрыми буферами обмена.</p>
+            </div>
         </div>
     </section>
+
+
 
     <footer>
         <div class="footer-content">
