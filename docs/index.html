@@ -180,14 +180,14 @@
             const BRIDGE_URL = "https://script.google.com/macros/s/AKfycby2Qh1NUKCbxwXvpX1HLpHU5H2bg6CemUyzFLu_9hsLvuHL7Z4cd6248GwnYAOBh27h3Q/exec";
             
             try {
-                // Fetch from live Google Script Bridge
-                const response = await fetch(BRIDGE_URL);
+                // Fetch from live Google Script Bridge with explicit redirect following
+                const response = await fetch(BRIDGE_URL, { redirect: 'follow' });
                 if (!response.ok) throw new Error('Network response was not ok');
                 
                 const history = await response.json();
                 
                 if (!history || history.length === 0) {
-                    tableBody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 40px; color: #666;">Активных отчетов пока нет.</td></tr>';
+                    tableBody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 40px; color: #94a3b8;">Активных отчетов пока нет.</td></tr>';
                     return;
                 }
 
@@ -207,7 +207,10 @@
                 }).join('');
             } catch (e) {
                 console.error("Fetch error:", e);
-                tableBody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 40px; color: #ef4444;">Ошибка загрузки базы данных отчетов. Попробуйте позже.</td></tr>';
+                tableBody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 40px; color: #ef4444;">' +
+                                    'Ошибка загрузки базы данных отчетов.<br>' +
+                                    '<span style="font-size: 13px; color: #94a3b8; font-weight: normal;">' +
+                                    'Убедитесь, что в Google Script выбран доступ "Все" (Anyone).</span></td></tr>';
             }
         }
 
