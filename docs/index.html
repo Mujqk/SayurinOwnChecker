@@ -177,21 +177,37 @@
 
         async function loadHistory() {
             const tableBody = document.getElementById('reports-body');
+            const BRIDGE_URL = "https://script.google.com/macros/s/AKfycby2Qh1NUKCbxwXvpX1HLpHU5H2bg6CemUyzFLu_9hsLvuHL7Z4cd6248GwnYAOBh27h3Q/exec";
+            
             try {
-                const response = await fetch('history.json');
+                // Fetch from live Google Script Bridge
+                const response = await fetch(BRIDGE_URL);
+                if (!response.ok) throw new Error('Network response was not ok');
+                
                 const history = await response.json();
                 
-                tableBody.innerHTML = history.map(entry => `
-                    <tr>
-                        <td class="player-cell">${entry.PlayerName}</td>
-                        <td class="id-cell">${entry.SteamId}</td>
-                        <td>${entry.Date}</td>
-                        <td><span class="status-badge ${entry.Verdict.toLowerCase()}">${entry.Verdict}</span></td>
-                        <td><a href="${entry.Link}" class="btn-report">Открыть</a></td>
-                    </tr>
-                `).join('');
+                if (!history || history.length === 0) {
+                    tableBody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 40px; color: #666;">Активных отчетов пока нет.</td></tr>';
+                    return;
+                }
+
+                tableBody.innerHTML = history.map(entry => {
+                    const statusClass = entry.Verdict.toLowerCase().includes('чист') ? 'clean' : 
+                                      entry.Verdict.toLowerCase().includes('подозр') ? 'warning' : 'danger';
+                    
+                    return `
+                        <tr>
+                            <td class="player-cell">${entry.PlayerName}</td>
+                            <td class="id-cell">${entry.SteamId}</td>
+                            <td>${entry.Date}</td>
+                            <td><span class="status-badge ${statusClass}">${entry.Verdict}</span></td>
+                            <td><a href="${entry.Link}" class="btn-report" target="_blank">Открыть</a></td>
+                        </tr>
+                    `;
+                }).join('');
             } catch (e) {
-                tableBody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 40px; color: #ef4444;">История пока пуста или не найдена.</td></tr>';
+                console.error("Fetch error:", e);
+                tableBody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 40px; color: #ef4444;">Ошибка загрузки базы данных отчетов. Попробуйте позже.</td></tr>';
             }
         }
 
