@@ -17,13 +17,14 @@
             <span class="logo-accent">SAYURIN</span>CHECKER
         </div>
         <div class="nav-links">
-            <a href="#features">Возможности</a>
-            <a href="https://baza-cs2.ru" target="_blank">Сайт проекта</a>
+            <a href="#" class="nav-item active" onclick="showTab('home')">Главная</a>
+            <a href="#" class="nav-item" onclick="showTab('reports')">Отчеты</a>
             <a href="https://github.com/Mujqk/SayurinOwnChecker" class="nav-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </div>
     </nav>
 
-    <main class="hero">
+    <div id="home-tab" class="tab-content active">
+        <main class="hero">
         <div class="hero-content">
             <h1 class="hero-title">Проверяй ПК на <br><span class="text-gradient">максимальной</span> скорости</h1>
             <p class="hero-subtitle">Инструмент нового поколения для глубокой проверки системы. Моментальные отчеты, защита от обхода и современный дизайн.</p>
@@ -120,6 +121,38 @@
 
 
 
+    </div> <!-- End home-tab -->
+
+    <div id="reports-tab" class="tab-content" style="display:none">
+        <section class="reports-section">
+            <h2 class="section-title">Панель <span class="text-gradient">отчетов</span></h2>
+            <div class="search-container">
+                <input type="text" id="report-search" placeholder="Поиск по SteamID..." oninput="filterReports()">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <div class="glass-panel reports-table-container">
+                <table id="reports-table">
+                    <thead>
+                        <tr>
+                            <th>Игрок</th>
+                            <th>SteamID</th>
+                            <th>Дата</th>
+                            <th>Статус</th>
+                            <th>Действие</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reports-body">
+                        <!-- Loaded from history.json -->
+                        <tr>
+                            <td colspan="5" style="text-align:center; padding: 40px; color: #666;">Загрузка отчетов...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-logo"><span class="logo-accent">SAYURIN</span>CHECKER</div>
@@ -129,5 +162,50 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
+            document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+            
+            document.getElementById(tabId + '-tab').style.display = 'block';
+            event.currentTarget.classList.add('active');
+
+            if (tabId === 'reports') {
+                loadHistory();
+            }
+        }
+
+        async function loadHistory() {
+            const tableBody = document.getElementById('reports-body');
+            try {
+                const response = await fetch('history.json');
+                const history = await response.json();
+                
+                tableBody.innerHTML = history.map(entry => `
+                    <tr>
+                        <td class="player-cell">${entry.PlayerName}</td>
+                        <td class="id-cell">${entry.SteamId}</td>
+                        <td>${entry.Date}</td>
+                        <td><span class="status-badge ${entry.Verdict.toLowerCase()}">${entry.Verdict}</span></td>
+                        <td><a href="${entry.Link}" class="btn-report">Открыть</a></td>
+                    </tr>
+                `).join('');
+            } catch (e) {
+                tableBody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 40px; color: #ef4444;">История пока пуста или не найдена.</td></tr>';
+            }
+        }
+
+        function filterReports() {
+            const filter = document.getElementById('report-search').value.toUpperCase();
+            const rows = document.getElementById('reports-body').getElementsByTagName('tr');
+            for (let i = 0; i < rows.length; i++) {
+                const idCell = rows[i].getElementsByTagName('td')[1];
+                if (idCell) {
+                    const textValue = idCell.textContent || idCell.innerText;
+                    rows[i].style.display = textValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+                }
+            }
+        }
+    </script>
 </body>
 </html>
