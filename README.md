@@ -78,10 +78,6 @@ SAYURIN
     Developed by <ins>NazeSayurin?</ins>
   </h1>
 
-  <p align="center">
-    <kbd>C# Enthusiast</kbd> • <kbd>.NET 9 Architect</kbd> • <kbd>OSU! Relax Master</kbd>
-  </p>
-
   <div align="center">
     <img src="https://img.shields.io/badge/Maintained-Yes-6a1b9a?style=for-the-badge&logo=github&labelColor=121212" />
     <img src="https://img.shields.io/badge/Vibe-Low_cortisol-9c27b0?style=for-the-badge&logo=visualstudiocode&labelColor=121212" />
