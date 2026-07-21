@@ -1,0 +1,26 @@
+SAYURIN PROPRIETARY END USER LICENSE AGREEMENT (EULA)
+Copyright (c) 2026 Sayurin Development Team. All Rights Reserved.
+
+Software: Sayurin BazaChecker (hereinafter "Software")
+Developer: Sayurin Development Team
+
+1. PROPRIETARY RIGHTS
+This Software is licensed, NOT sold. It is proprietary, closed-source software. All title, ownership, intellectual property rights, and copyrights in and to the Software (including any updates, code, branding, and assets) remain exclusively with the Sayurin Development Team.
+
+2. RESTRICTIONS ON USE & REDISTRIBUTION
+You are granted a limited, non-exclusive, non-transferable license to execute the compiled Software for personal use only. 
+
+You are STRICTLY PROHIBITED from:
+a) Copying, publishing, hosting, leaking, or distributing the Software or any portion of its source code/binaries on any public or private network (including, but not limited to GitHub, Telegram, web forums, or file-sharing platforms).
+b) Modifying, reverse engineering, decompiling, disassembling, or creating derivative works based on the Software or its code.
+c) Removing, altering, or obscuring any copyright notices, "BAZA" / "SAYURIN" branding, or proprietary labels from the Software interface, files, or installer.
+d) Selling, reselling, renting, leasing, sublicensing, or using the Software or its parts for any commercial purposes or unauthorized commercial redistribution.
+
+3. NO EDUCATIONAL OR PUBLIC FAIR USE EXCEPTIONS
+Any distribution under the claim of "educational purposes", "forensics", "testing", or "leaks" without express written authorization from the Developer constitutes an intentional infringement of copyright law and a direct breach of this Agreement.
+
+4. TERMINATION & ENFORCEMENT
+Any unauthorized distribution or violation of these terms automatically terminates your rights under this license and will result in immediate DMCA takedown requests, account reporting, and potential legal action.
+
+5. DISCLAIMER OF WARRANTY & LIMITATION OF LIABILITY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OR MISUSE OF THIS SOFTWARE.
