@@ -75,5 +75,9 @@ SAYURIN
   </div>
 
   <br>
+  ---
+### License
+© 2026 Sayurin Development Team. All Rights Reserved.  
+This software is proprietary. See [LICENSE.txt](LICENSE.txt) for full terms.
 
   <img src="https://capsule-render.vercel.app/api?type=waving&color=1a1a2e&height=120&section=footer&text=SEE%20YOU%20IN%20BAZA%20CS2&fontSize=30&fontColor=6a1b9a&fontAlignY=60" width="100%" />
